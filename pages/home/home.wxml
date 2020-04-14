@@ -1,3 +1,20 @@
 <!--pages/home/home.wxml-->
-<text class="title">Hello World</text>
-<button>点我</button>
+<!-- 1.小程序的数据绑定   {{}}-mustache语法 -->
+<view>Hello {{name}}</view>
+<view>我今年{{age}}岁</view>
+
+<!-- 2.列表展示: wx:for -->
+<view wx:for="{{students}}">{{item.name}} 年龄：{{item.age}} 爱好：{{item.hobby}}</view>
+
+<!-- 3.事件监听 -->
+<view>当前计数：{{counter}}</view>
+<button bindtap="addClick">加</button>
+<button bindtap="subtractClick">减</button>
+
+<button
+  size="mini"
+  open-type="getUserInfo"
+  bindgetuserinfo="handleGetUserInfo">
+  获取授权</button>
+
+  <view wx:for="{{list}}">{{item.title}}</view>
