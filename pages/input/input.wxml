@@ -1,0 +1,11 @@
+<!--pages/input/input.wxml-->
+<!-- 1.input基本使用 -->
+<input></input>
+
+<!-- value: 初始值 -->
+<input value="111"></input>
+
+<!-- 3.type决定键盘类型(文本输入/数字/身份证) -->
+
+<!-- 4.password 密码类型 -->
+<input password></input>

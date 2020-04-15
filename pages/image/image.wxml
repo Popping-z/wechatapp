@@ -1,0 +1,24 @@
+<!--pages/image/image.wxml-->
+<!-- 1.image组件可以写成单标签，也可以修改成双标签
+     2.image组件默认大小 320x240
+     3.image是行内块元素 -->
+<!-- <image></image> -->
+
+<!-- src: 本地地址/远程地址 -->
+<image src="../../assets/image/me.jpg"></image>
+<image src="/assets/image/me.jpg"></image>
+<image src="https://dgss0.bdstatic.com/5bVWsj_p_tVS5dKfpU_Y_D3/res/r/image/2020-04-14/a0d6525a0a7eb05be210c2ff4c63b342.jpg"></image>
+<!-- 相册中的图片 -->
+<button bindtap="handleImg">选择图片</button>
+<image src="{{imagePath}}"></image>
+<!-- bindload: 监听图片加载完成
+      lazy-load图片懒加载 -->
+<view>------------------------------</view>
+  <image wx:for="{{1}}"
+    src="https://rpic.douyucdn.cn/asrpic/200414/241431_2040.png/webpdy1"
+    bindload="handleImageLoad"
+    lazy-load>
+  </image>
+  <!--  -->
+  <image show-menu-by-longpress mode="aspectFit"
+    src="/assets/image/me.jpg"></image>
