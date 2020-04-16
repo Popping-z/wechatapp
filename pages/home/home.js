@@ -5,9 +5,36 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    title: ['衣服', '裤子', '鞋子']
+  },
+  handleClick(event) {
+    console.log(event)
+    const index = event.currentTarget.dataset.index
+    const item = event.currentTarget.dataset.item
+    console.log(item, index)
+  },
+  handleTouchStart(){
+    console.log('handleTouchStart')
+  },
+  handleTouchMove(){
+    console.log('handleTouchMove')
+  },
+  handleTouchEnd(){
+    console.log('handleTouchEnd')
+  },
+  handleTap(){
+    console.log('handleTap')
+  },
+  handleLongpress(){
+    console.log('handleLongpress')
   },
 
+  btnBindtap(event) {
+    console.log('----',event)
+  },
+  btnBindend(event) {
+    console.log('=======', event)
+  },
   /**
    * 生命周期函数--监听页面加载
    */

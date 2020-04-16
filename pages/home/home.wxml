@@ -1,3 +1,25 @@
 <!--pages/home/home.wxml-->
-<text class="title">Hello World</text>
-<button>点我</button>
+<!-- 事件 -->
+<view class="box"
+        bindtouchstart="handleTouchStart"
+        bindtouchmove="handleTouchMove"
+        bindtouchend="handleTouchEnd"
+        bindtap="handleTap"
+        bindlongtap="handleLongpress"
+      ></view>
+<!-- 事件对象的分析 -->
+<button id="btn" size="mini" 
+        bindtap="btnBindtap"
+        bindtouchend="btnBindend"
+>事件对象</button>
+
+<!-- 事件的传递参数 -->
+<view class="container">
+  <block wx:for="{{title}}" wx:key="{{index}}">
+    <view class="item" bindtap="handleClick"
+          data-item="{{item}}"
+          data-index="{{index}}">
+      {{item}}
+    </view>
+  </block>
+</view>
