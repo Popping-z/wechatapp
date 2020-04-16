@@ -1,0 +1,40 @@
+<!--pages/wxml/wxml.wxml-->
+
+<!-- mustache语法 -->
+<view>{{message}}</view>
+<view>{{firstname}} {{lastname}}</view>
+<view>{{firstname + '·' + lastname}}</view>
+<view>{{age >= 18 ? '成年人' : '未成年人'}}</view>
+<view>{{nowTime}}</view>
+
+<button size="mini" bindtap="handleSwitchColor">切换颜色</button>
+<view class="box {{isActive ? 'active' : ''}}">哈哈哈</view>
+<view>------条件判断------</view>
+<button size="mini" bindtap="handleShow">显示/隐藏</button>
+<view wx:if="{{isShow}}">撤硕</view>
+<view wx:if="{{score >= 90}}">优秀</view>
+<view wx:elif="{{score >= 80}}">良好</view>
+<view wx:elif="{{scire >= 70}}">一般</view>
+<view wx:else>不及格</view>
+
+<!-- hidden属性 -->
+<view>------------</view>
+<view hidden="{{false}}">我是hidden控制的内容</view>
+<view wx:if="{{true}}">我是通过wx：if控制的内容</view>
+<!-- 列表渲染 -->
+<!-- <view wx:for="{{['abc', 'def', 'ghi']}}">{{item}} {{index}}</view>
+<block wx:for="{{3}}">
+  <button>干了兄弟们</button>
+  <view>奥利给</view>
+</block> -->
+
+<!-- item index起名字 -->
+<view wx:for="{{movies}}" wx:for-item="movies">{{movies}}</view>
+<view>-------template--------</view>
+<!-- 模板在在没有使用前不会被渲染 -->
+<template name="contentItem">
+  <button>{{btn}}</button>
+  <view>{{text}}</view>
+</template>
+
+<template is="contentItem" data="{{btn: '点鸡', text: '大爷来玩啊'}}"/>
