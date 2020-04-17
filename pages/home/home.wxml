@@ -1,3 +1,39 @@
 <!--pages/home/home.wxml-->
 <text class="title">Hello World</text>
 <button>点我</button>
+<!-- 1.使用自定义组件 -->
+<!-- <my-cpn></my-cpn>
+<my-cpn/> -->
+
+<!-- 自定义组件的样式细节 -->
+<!-- <my-style></my-style> -->
+
+<!-- 给自定义组件传递 -->
+<my-prop title="奥利给干了兄弟们" titleclass="red"/>
+<my-prop title="老八秘制小汉堡" titleclass="green"/>
+<my-prop/>
+
+<!-- 组件内部发出事件 -->
+<view>-----------------</view>
+<view>当前计数：{{counter}}</view>
+<my-event bind:increment="handleIncrement"/>
+<!-- tab-control -->
+<view>-------------</view>
+<tab-control titles="{{['流行', '新款', '精选']}}"
+              bind:itemclick="handleTabClick"/>
+<!-- 直接选中组件修改数据/调用方法 -->
+<button size="mini" bindtap="handleSel">修改组件内的数据</button>
+<my-sel id="sel-id"/>
+<view>------------------</view>
+<!-- 插槽的使用 -->
+<my-slot>
+  <button size="mini">我是插入的按钮</button>
+</my-slot>
+<view>---------------------</view>
+<!-- 多个插槽的使用 -->
+<!-- 注意事项：
+      1.给每一个插槽起名
+      2. 必须在Component对象中添加一个选项：options-->
+<my-mslot>
+  <button size="mini" slot="slot2">奥利给干了兄弟们</button>
+</my-mslot>
