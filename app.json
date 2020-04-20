@@ -1,5 +1,10 @@
 {
   "pages": [
-    "pages/home/home"
-  ]
+    "pages/home/home",
+    "pages/about/about",
+    "pages/detail/detail",
+    "pages/comment/comment"
+  ],
+  
+  "sitemapLocation": "sitemap48.json"
 }

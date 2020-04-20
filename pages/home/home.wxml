@@ -1,3 +1,22 @@
 <!--pages/home/home.wxml-->
 <text class="title">Hello World</text>
 <button>点我</button>
+
+<!-- 1.navigator页面跳转 -->
+<navigator url="/pages/detail/detail">跳到详情页</navigator>
+<!-- 2.open-type属性 -->
+<navigator url="/pages/detail/detail"
+          open-type="redirect">
+跳到详情页(redirect)</navigator>
+<navigator url="/pages/about/about"
+          open-type="switchTab">
+跳到关于页(switchTab)</navigator>
+<navigator url="/pages/about/about"
+          open-type="reLaunch">
+跳到关于页(reLaunch)</navigator>
+<navigator url="/pages/comment/comment">跳到评论页</navigator>
+
+<!-- 通过代码进行页面跳转 -->
+<view>-------------------------</view>
+<button size="mini" bindtap="handlePushDetail">跳转到详情页</button>
+

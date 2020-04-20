@@ -1,0 +1,20 @@
+"tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/detail/detail",
+        "text": "详情"
+      },
+      {
+        "pagePath": "pages/about/about",
+        "text": "关于"
+      },
+      {
+        "pagePath": "pages/comment/comment",
+        "text": "评论"
+      }
+    ]
+  },

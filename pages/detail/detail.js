@@ -1,4 +1,4 @@
-// pages/home/home.js
+// pages/detail/detail.js
 Page({
 
   /**
@@ -7,11 +7,12 @@ Page({
   data: {
 
   },
-  handlePushDetail() {
-    wx.navigateTo({
-      url: '/pages/detail/detail',
+  handleBackHome(){
+    wx.navigateBack({
+      complete: (res) => {},
     })
   },
+
   /**
    * 生命周期函数--监听页面加载
    */
